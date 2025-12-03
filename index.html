@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Raporgo — Örnek Rapor & Kurulum</title>
+
+<!-- Basit, mobil odaklı stiller -->
+<style>
+  :root{
+    --bg:#f7f7f8;
+    --card:#ffffff;
+    --accent:#222;
+    --muted:#6b6b6b;
+    --radius:14px;
+    --max-width:800px;
+  }
+  html,body{height:100%}
+  body{
+    margin:0;
+    font-family: "Cooper", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background:var(--bg);
+    color:#111;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--max-width);margin:18px auto;padding:16px;}
+  header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+  .logo{
+    width:56px;height:56px;border-radius:12px;background:#ddd;display:flex;align-items:center;justify-content:center;font-weight:700;
+  }
+  h1{font-size:18px;margin:0}
+  p.lead{margin:6px 0 0;color:var(--muted);font-size:14px}
+
+  .card{background:var(--card);border-radius:var(--radius);box-shadow:0 6px 18px rgba(10,10,10,0.06);padding:14px;margin-bottom:12px;}
+  .video-wrap{position:relative;padding-top:56.25%;overflow:hidden;border-radius:10px;}
+  .video-wrap iframe{position:absolute;left:0;top:0;width:100%;height:100%;border:0}
+
+  .pdf-wrap iframe{width:100%;height:380px;border:0;border-radius:10px}
+  @media(min-width:720px){ .pdf-wrap iframe{height:480px} }
+
+  .btn-buy{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    background:var(--accent);
+    color:#fff;
+    padding:14px 18px;
+    border-radius:12px;
+    font-weight:600;
+    box-shadow:0 6px 14px rgba(0,0,0,0.08);
+  }
+
+  .two-col{display:grid;gap:10px}
+  @media(min-width:720px){ .two-col{grid-template-columns:1fr 1fr} }
+
+  footer{margin-top:8px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">RG</div>
+      <div>
+        <h1>Raporgo — Ürün / Kullanım</h1>
+        <p class="lead">Kullanım videosu, örnek raporlar ve satın alma linki. Mobil öncelikli tasarım.</p>
+      </div>
+    </header>
+
+    <!-- Video Card -->
+    <section class="card">
+      <h3 style="margin:0 0 8px 0">Kurulum Videosu</h3>
+      <div class="video-wrap">
+        <!-- VIDEO_ID yerine YouTube ID koy -->
+        <iframe src="https://www.youtube.com/embed/iTasQ6ar8VY?rel=0&modestbranding=1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- PDF'ler Card -->
+    <section class="card">
+      <h3 style="margin:0 0 8px 0">Örnek Raporlar</h3>
+      <div class="two-col">
+        <div class="pdf-wrap">
+          <!-- DRIVE_ID_1 yerine Drive dosya ID -->
+          <iframe src="https://drive.google.com/file/d/1Eh26PQuA_S3vxOBWKbuG-RaH9TVDMylR/preview"></iframe>
+        </div>
+        <div class="pdf-wrap">
+          <!-- DRIVE_ID_2 yerine Drive dosya ID -->
+          <iframe src="https://drive.google.com/file/d/1_tNqROhTHXFZLLMuv98SNjKG8bj8ruMH/preview"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shopier Card -->
+    <section class="card">
+      <h3 style="margin:0 0 8px 0">Satın Alma</h3>
+      <p style="margin:0 0 12px 0;color:var(--muted)">Aşağıdaki butona tıklayarak Shopier üzerinden satın alabilirsiniz.</p>
+      <!-- SHOPIER_LINK yerine Shopier URL koy -->
+      <a class="btn-buy" href="https://www.shopier.com/raporgo" target="_blank" rel="noopener">Satın Al — Shopier</a>
+    </section>
+
+    <footer>
+      <small>Raporgo • Tüm hakları saklıdır.</small>
+    </footer>
+  </div>
+</body>
+</html>
